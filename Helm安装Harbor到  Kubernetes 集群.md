@@ -51,14 +51,12 @@ kubectl apply -f harbor-secret.yaml -n kube-ops
 
 kubectl apply -f harbor-pvc.yaml -n kube-ops
 
-cd /vagrant/harbor/harbor-helm-1.2.2
+cd /vagrant/harbor/harbor-helm-1.1.5/
 helm install --name my-release . --namespace kube-ops -f values.yaml
 
 
 helm delete my-release --purge
 
-
-helm install --name nginx-ingress --set "rbac.create=true,controller.service.externalIPs[0]=192.168.100.211,controller.service.externalIPs[1]=192.168.100.212,controller.service.externalIPs[2]=192.168.100.213" stable/nginx-ingress
 
 
 ```
