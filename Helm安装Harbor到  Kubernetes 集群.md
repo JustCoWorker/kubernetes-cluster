@@ -1,6 +1,6 @@
-#Helm安装Harbor到  Kubernetes 集群
+# Helm安装Harbor到  Kubernetes 集群
 
-#####CentOS 安装 helm
+##### CentOS 安装 helm
 
 ```shell
 vagrant  ssh node3
@@ -60,5 +60,4 @@ helm delete my-release --purge
 
 ```
 
-##### 
 
