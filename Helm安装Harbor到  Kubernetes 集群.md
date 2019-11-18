@@ -25,18 +25,17 @@ helm version
 ```shell
 #每个节点上拉去镜像文件
 
-docker pull goharbor/chartmuseum-photon:v0.9.0-v1.9.2
-docker pull goharbor/clair-photon:v2.0.9-v1.9.2
-docker pull goharbor/harbor-core:v1.9.2
-docker pull goharbor/harbor-jobservice:v1.9.2
-docker pull goharbor/notary-server-photon:v0.6.1-v1.9.2
-docker pull goharbor/notary-signer-photon:v0.6.1-v1.9.2
-docker pull goharbor/harbor-portal:v1.9.2
-docker pull goharbor/harbor-registryctl:v1.9.2
-docker pull goharbor/registry-photon:v2.7.1-patch-2819-2553-v1.9.2
-docker pull busybox:latest
-docker pull goharbor/harbor-db:v1.9.2
-docker pull goharbor/redis-photon:v1.9.2
+docker pull goharbor/chartmuseum-photon:v0.9.0-v1.8.5
+docker pull goharbor/clair-photon:v2.0.8-v1.8.5
+docker pull goharbor/harbor-core:v1.8.5
+docker pull goharbor/harbor-jobservice:v1.8.5
+docker pull goharbor/notary-server-photon:v0.6.1-v1.8.5
+docker pull goharbor/notary-signer-photon:v0.6.1-v1.8.5
+docker pull goharbor/harbor-portal:v1.8.5
+docker pull goharbor/registry-photon:v2.7.1-patch-2819-v1.8.5
+docker pull goharbor/harbor-registryctl:v1.8.5
+docker pull goharbor/harbor-db:v1.8.5
+docker pull goharbor/redis-photon:v1.8.5
 
 
 cd /vagrant/harbor
