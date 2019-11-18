@@ -22,7 +22,7 @@ mkdir -p /var/nfs/k8s/harbor/redis
 chmod a+rw /var/nfs/k8s
 ```
 
-#####配置NFS服务目录
+##### 配置NFS服务目录
 
 vi /etc/exports
 
@@ -30,21 +30,21 @@ vi /etc/exports
 /var/nfs/k8s  *(rw,sync,no_subtree_check,no_root_squash)
 ```
 
-#####rpcbind和nfs做开机启动
+##### rpcbind和nfs做开机启动
 
 ```sh
 systemctl enable rpcbind.service
 systemctl enable nfs-server.service
 ```
 
-#####启动服务
+##### 启动服务
 
 ```sh
 systemctl start rpcbind.service
 systemctl start nfs-server.service
 ```
 
-#####查看共享状态
+##### 查看共享状态
 
 ```sh
 showmount -e 
