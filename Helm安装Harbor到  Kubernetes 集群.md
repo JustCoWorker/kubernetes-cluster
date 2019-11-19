@@ -58,6 +58,9 @@ kubectl apply -f harbor-pvc.yaml -n kube-ops
 cd /vagrant/harbor/harbor-helm-1.1.5/
 helm install --name my-release . --namespace kube-ops -f values.yaml
 
+cd /vagrant/harbor/nginx-ingress/
+helm install --name my-nginx . --namespace kube-ops -f values.yaml
+
 
 helm delete my-release --purge
 
