@@ -36,7 +36,10 @@ docker pull goharbor/registry-photon:v2.7.1-patch-2819-v1.8.5
 docker pull goharbor/harbor-registryctl:v1.8.5
 docker pull goharbor/harbor-db:v1.8.5
 docker pull goharbor/redis-photon:v1.8.5
-docker pulll quay.azk8s.cn/external_storage/nfs-client-provisioner:latest
+docker pull quay.azk8s.cn/external_storage/nfs-client-provisioner:latest
+docker pull quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.26.1
+docker pull gotok8s/defaultbackend-amd64:1.5
+docker tag  gotok8s/defaultbackend-amd64:1.5 k8s.gcr.io/defaultbackend-amd64:1.5
 
 
 
