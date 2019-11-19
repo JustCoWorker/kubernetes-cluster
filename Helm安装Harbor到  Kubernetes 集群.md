@@ -36,6 +36,8 @@ docker pull goharbor/registry-photon:v2.7.1-patch-2819-v1.8.5
 docker pull goharbor/harbor-registryctl:v1.8.5
 docker pull goharbor/harbor-db:v1.8.5
 docker pull goharbor/redis-photon:v1.8.5
+docker pulll quay.azk8s.cn/external_storage/nfs-client-provisioner:latest
+
 
 
 cd /vagrant/harbor
