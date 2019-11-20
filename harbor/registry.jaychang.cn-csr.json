@@ -1,0 +1,23 @@
+{
+  "CN": "harbor",
+  "hosts": [
+    "172.17.8.101",
+    "172.17.8.102",
+    "172.17.8.103",
+    "10.1.80.77",
+    "registry.jaychang.cn"
+  ],
+  "key": {
+    "algo": "rsa",
+    "size": 2048
+  },
+  "names": [
+    {
+      "C": "CN",
+      "ST": "BeiJing",
+      "L": "BeiJing",
+      "O": "kubernetes",
+      "OU": "System"
+    }
+  ]
+}

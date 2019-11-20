@@ -1,0 +1,138 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: harbor-registry-pv
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+  - ReadWriteMany
+  persistentVolumeReclaimPolicy: Delete
+  nfs:
+    server: 172.17.8.103
+    path: /var/nfs/k8s/harbor/registry
+
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: harbor-registry-pvc
+  namespace: kube-ops
+spec:
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 10Gi
+      
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: harbor-chartmuseum-pv
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+  - ReadWriteMany
+  persistentVolumeReclaimPolicy: Delete
+  nfs:
+    server: 172.17.8.103
+    path: /var/nfs/k8s/harbor/chartmuseum
+
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: harbor-chartmuseum-pvc
+  namespace: kube-ops
+spec:
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 10Gi
+
+---      
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: harbor-jobservice-pv
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+  - ReadWriteMany
+  persistentVolumeReclaimPolicy: Delete
+  nfs:
+    server: 172.17.8.103
+    path: /var/nfs/k8s/harbor/jobservice
+
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: harbor-jobservice-pvc
+  namespace: kube-ops
+spec:
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 10Gi
+
+---     
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: harbor-database-pv
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+  - ReadWriteMany
+  persistentVolumeReclaimPolicy: Delete
+  nfs:
+    server: 172.17.8.103
+    path: /var/nfs/k8s/harbor/database
+
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: harbor-database-pvc
+  namespace: kube-ops
+spec:
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 10Gi
+
+---     
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: harbor-redis-pv
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+  - ReadWriteMany
+  persistentVolumeReclaimPolicy: Delete
+  nfs:
+    server: 172.17.8.103
+    path: /var/nfs/k8s/harbor/redis
+
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: harbor-redis-pvc
+  namespace: kube-ops
+spec:
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 10Gi
